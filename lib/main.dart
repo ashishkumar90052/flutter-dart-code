@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutterdartcode/screens/1.movies_booking/home.dart';
+import 'package:flutterdartcode/screens/3.video_player/video_data_list.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       themeMode: ThemeMode.dark,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
         brightness: Brightness.light,
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const FullscreenSliderDemo(),
+      home: const VideoList(),
     );
   }
 }

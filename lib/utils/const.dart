@@ -374,3 +374,50 @@ final List<Map> itemg = [
   },
   // Add more items as needed
 ];
+
+List<Map> userList = [
+  {
+    'name': 'Sofia',
+    'img':
+        'https://media.istockphoto.com/id/1290658063/photo/portrait-of-a-beautiful-woman-with-natural-make-up.jpg?s=612x612&w=0&k=20&c=wTNoulQplpI1ISlFr2drr0yrLRJDzG8EpTz3CMNrEXQ='
+  },
+  {
+    'name': 'Michael',
+    'img':
+        'https://www.apetogentleman.com/wp-content/uploads/2018/06/top-male-models.jpg'
+  },
+  {
+    'name': 'Jhon lang',
+    'img':
+        'https://img.freepik.com/free-photo/photo-portrait-pretty-girl-touching-face-neck-sensual-dreamy-isolated-neon-pink_231208-13307.jpg'
+  },
+  {
+    'name': 'Lady gaga',
+    'img':
+        'https://rockaquajays.biz/wp-content/uploads/2021/01/Transgender-Model-Valentina-Sampaio-Interview.jpg'
+  },
+  {
+    'name': 'Haider',
+    'img': 'https://static.toiimg.com/photo/80482428.cms?imgsize=99038'
+  },
+  {
+    'name': 'Michel',
+    'img':
+        'https://eyemediastudios.co.uk/wp-content/uploads/2022/07/male-model.jpg'
+  },
+  {
+    'name': 'Jhon Luka',
+    'img':
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8KseuHmJk80x-aAnsHn4ZnY8Tlh-E3QCNwA&usqp=CAU'
+  },
+  {
+    'name': 'Phillepe',
+    'img':
+        'https://starsunfolded.com/wp-content/uploads/2022/03/Prabh-Uppal.jpg'
+  },
+  {
+    'name': 'Vaibhav',
+    'img':
+        'https://i0.wp.com/4.bp.blogspot.com/-gXF6kT8-pjM/V7Hq4i9GOwI/AAAAAAAABDY/aIf2qPT4ZP8XB8TjP8sjYIHs3juUCJ3JwCLcB/s1600/smaransahu.jpg?ssl=1'
+  },
+];
