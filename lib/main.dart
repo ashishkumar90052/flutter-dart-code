@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutterdartcode/screens/9.onboarding/onboarding.dart';
-import 'package:flutterdartcode/screens/9.swipe_to_pay/swipe_button.dart';
-
-import 'mini_tutorials/1. retrive_text.dart';
+import 'package:flutterdartcode/screens/6.threds/home.dart';
+import 'package:get/get.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,9 +14,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+        enableLog: true,
         title: 'Flutter Demo',
-        themeMode: ThemeMode.dark,
+        themeMode: ThemeMode.system,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           useMaterial3: true,
@@ -30,6 +29,6 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
           // colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
         ),
-        home: const MyCustomForm());
+        home: const BottomNavigationBarExampleApp());
   }
 }

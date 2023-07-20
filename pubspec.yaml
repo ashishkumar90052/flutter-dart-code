@@ -41,7 +41,7 @@ dependencies:
   better_player: ^0.0.83
   scratcher: ^2.3.0
   confetti: ^0.7.0
-  
+  get: ^4.6.5
 
 
 dev_dependencies:
