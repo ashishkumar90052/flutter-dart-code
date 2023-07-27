@@ -1,7 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutterdartcode/screens/6.threds/home.dart';
+import 'package:flutterdartcode/chat/chat.dart';
 import 'package:get/get.dart';
+import 'iOs/1.car_ui.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,6 +31,21 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
           // colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
         ),
-        home: const BottomNavigationBarExampleApp());
+        home: const ChatScreen());
+  }
+}
+
+class IOSApp extends StatelessWidget {
+  const IOSApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const CupertinoApp(
+        debugShowCheckedModeBanner: false,
+        theme: CupertinoThemeData(
+            primaryColor: CupertinoColors.black,
+            applyThemeToAll: true,
+            brightness: Brightness.light),
+        home: Car());
   }
 }
