@@ -30,9 +30,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   google_fonts: ^4.0.4
   carousel_slider: ^4.2.1
@@ -46,6 +43,9 @@ dependencies:
   pinput: ^2.3.0
   google_mlkit_text_recognition: 0.4.0
   camera: ^0.10.0+4
+  geolocator: ^7.7.0
+  geocoding: ^2.1.0
+
 
 dev_dependencies:
   flutter_test:
