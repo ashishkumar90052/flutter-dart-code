@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutterdartcode/utils/size_cofig.dart';
 import 'package:neopop/widgets/buttons/neopop_button/neopop_button.dart';
+import 'package:neopop/widgets/buttons/neopop_tilted_button/neopop_tilted_button.dart';
 
 class NeoPops extends StatelessWidget {
   const NeoPops({super.key});
@@ -30,7 +31,7 @@ class NeoPops extends StatelessWidget {
             ),
           ),
           h24,
-          const Text('NeoPop Button'),
+          const Text('Flat Button'),
           h16,
           NeoPopButton(
             color: kGreen,
@@ -50,7 +51,7 @@ class NeoPops extends StatelessWidget {
             ),
           ),
           h24,
-          const Text('NeoPop Button'),
+          const Text('Elevated Strokes'),
           h16,
           NeoPopButton(
             color: kBlack,
@@ -74,7 +75,7 @@ class NeoPops extends StatelessWidget {
             ),
           ),
           h24,
-          const Text('NeoPop Button'),
+          const Text('Horizontally Aligned Buttons'),
           h16,
           Row(
             mainAxisSize: MainAxisSize.min,
@@ -119,6 +120,25 @@ class NeoPops extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+          h24,
+          const Text('Shimmer Button'),
+          h16,
+          NeoPopTiltedButton(
+            isFloating: true,
+            onTapUp: () {},
+            decoration: const NeoPopTiltedButtonDecoration(
+                color: Color.fromRGBO(255, 235, 52, 1),
+                plunkColor: Color.fromRGBO(255, 235, 52, 1),
+                shadowColor: Color.fromRGBO(183, 172, 172, 1),
+                showShimmer: true),
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 70.0, vertical: 15),
+              child: Text(
+                'Play Now',
+                style: TextStyle(color: kBlack),
+              ),
+            ),
           ),
         ],
       ),

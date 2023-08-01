@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 List<Map> musicList = [
   {
     'title': 'Ilzaam',
@@ -421,3 +423,23 @@ List<Map> userList = [
         'https://i0.wp.com/4.bp.blogspot.com/-gXF6kT8-pjM/V7Hq4i9GOwI/AAAAAAAABDY/aIf2qPT4ZP8XB8TjP8sjYIHs3juUCJ3JwCLcB/s1600/smaransahu.jpg?ssl=1'
   },
 ];
+
+final List ctxList = [
+  'https://radio.callmefred.com/en/wp-content/uploads/2023/05/final_cover-All-The-Right-Moves-OneRepublic.jpg',
+  'https://c.saavncdn.com/857/Are-You-Lonely-English-2019-20190213200954-500x500.jpg',
+  'https://i1.sndcdn.com/artworks-hHRNAPyoL1gTPNV7-mUwz9A-t500x500.jpg',
+  'https://i.scdn.co/image/ab67616d0000b27383bd1e120f8b14407fe73816',
+  'https://i1.sndcdn.com/artworks-l1XLpGzbyQzrqUuW-8ao2yQ-t500x500.jpg',
+  'https://media1.metrotimes.com/metrotimes/imager/u/zoom/29143520/2-sterlgotti-brokenheart.jpg?cb=1647990305',
+  'https://pbs.twimg.com/media/FvUcokBWwAIdldZ.jpg',
+  'https://www.themoviedb.org/t/p/original/gzFoqLYdFClzfXBsxUTjfFwMvXe.jpg',
+  'https://i1.sndcdn.com/artworks-000075942842-c48doi-t500x500.jpg',
+  'https://i.pinimg.com/originals/67/0a/a0/670aa0f33a730e74e4312417d3ce1af3.jpg',
+  'https://mir-s3-cdn-cf.behance.net/project_modules/hd/067d5068717917.5b672f7514e44.jpg',
+  'https://www.udiscovermusic.com/wp-content/uploads/2021/06/spotify-singles-yungblud-1-820x820.jpg',
+  'https://www.androidauthority.com/wp-content/uploads/2023/02/drake-stock.jpg',
+];
+
+const title = TextStyle(fontSize: 18, fontWeight: FontWeight.w600);
+const subTitle = TextStyle(fontSize: 15, fontWeight: FontWeight.w400);
+const trailing = TextStyle(fontSize: 12, fontWeight: FontWeight.w300);
