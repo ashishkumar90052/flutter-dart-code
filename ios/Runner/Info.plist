@@ -51,5 +51,11 @@
 	<string>This application requires location services to work</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>This application requires location services to work</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need to upload image</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Need to upload image</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Need to upload image</string>
 </dict>
 </plist>

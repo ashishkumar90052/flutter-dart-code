@@ -44,7 +44,14 @@ dependencies:
   camera: ^0.10.0+4
   geolocator: ^7.7.0
   geocoding: ^2.1.0
-  flutter_chat_ui: ^1.6.9
+  flutter_chat_ui:
+  file_picker: ^5.3.3
+  image_picker: ^1.0.1
+  open_filex: ^4.3.2
+  uuid: ^3.0.7
+  flex_color_picker: ^3.3.0
+  flutter_internet_speed_test: ^1.4.0
+  better_player:
 
 dev_dependencies:
   flutter_test:
