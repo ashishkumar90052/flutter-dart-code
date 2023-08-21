@@ -52,6 +52,9 @@ dependencies:
   flex_color_picker: ^3.3.0
   flutter_internet_speed_test: ^1.4.0
   better_player:
+  percent_indicator: ^4.2.3
+  flutter_sequence_animation:
+  story: ^1.1.0
 
 dev_dependencies:
   flutter_test:

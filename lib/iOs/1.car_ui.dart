@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterdartcode/utils/size_cofig.dart';
 
+import '../utils/const.dart';
+
 class Car extends StatelessWidget {
   const Car({super.key});
 
   @override
   Widget build(BuildContext context) {
-    const title = TextStyle(fontSize: 18, fontWeight: FontWeight.w600);
-    const subTitle = TextStyle(fontSize: 15, fontWeight: FontWeight.w400);
-
+   
     return CupertinoPageScaffold(
       navigationBar: const CupertinoNavigationBar(
           border: Border(bottom: BorderSide(color: colorLearn)),
