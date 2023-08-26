@@ -443,3 +443,151 @@ final List ctxList = [
 const title = TextStyle(fontSize: 18, fontWeight: FontWeight.w600);
 const subTitle = TextStyle(fontSize: 15, fontWeight: FontWeight.w400);
 const trailing = TextStyle(fontSize: 12, fontWeight: FontWeight.w300);
+
+List mockDatadd = [
+  {
+    "mockname": "Sample Mock Test",
+    "sections": [
+      {
+        "name": "VARC",
+        "timing": 15,
+        "questions": [
+          {
+            "id": "1",
+            "question": "At varc What is the square root of 144?",
+            "section": "math",
+            "type": 1,
+            "options": ["9", "12", "15", "18"],
+            "isPara": "No",
+            "videoLink": "",
+            "stage": 0
+          },
+          {
+            "id": "2",
+            "question": "Simplify: 3x + 2x - 5x = ?",
+            "section": "math",
+            "type": 1,
+            "options": ["0", "5", "10", "12"],
+            "isPara": "No",
+            "videoLink": "",
+            "stage": 0
+          },
+          {
+            "id": "4",
+            "question": "How are you How you doing?",
+            "section": "math",
+            "type": 1,
+            "options": ["10", "as5", "asd10", "das"],
+            "isPara": "No",
+            "videoLink": "",
+            "stage": 0
+          },
+          {
+            "id": "2",
+            "question": "Simplify: 3x + 2x - 5x = ?",
+            "section": "math",
+            "type": 1,
+            "options": ["0n", "5c", "10fd", "12"],
+            "isPara": "No",
+            "videoLink": "",
+            "stage": 0
+          },
+          {
+            "id": "4",
+            "question": "How are you How you doing?",
+            "section": "math",
+            "type": 1,
+            "options": ["a", "b", "c", "d"],
+            "isPara": "No",
+            "videoLink": "",
+            "stage": 0
+          }
+        ]
+      },
+      {
+        "name": "LRDI",
+        "timing": 10,
+        "questions": [
+          {
+            "id": "3",
+            "question":
+                "  adf a fd  a df asRemember to check the console output as you interact with your application. If you notice any unexpected behavior or the timer doesn't seem to decrease, it will give you a starting point to identify the problem. At LRDI What does the word 'Eloquent' mean?",
+            "section": "verbal",
+            "type": 2,
+            "options": ["Sad", "Angry", "Fluent", "Shy"],
+            "isPara": "No",
+            "videoLink": "",
+            "stage": 0
+          },
+          {
+            "id": "4",
+            "question":
+                "hello there For a sf a sf a d adsf m a sentence using the word 'Apprehension'.",
+            "section": "verbal",
+            "type": 3,
+            "options": [],
+            "isPara": "Yes",
+            "videoLink": "",
+            "stage": 0
+          }
+        ]
+      },
+      {
+        "name": "QUANTS",
+        "timing": 15,
+        "questions": [
+          {
+            "id": "3",
+            "question": "At Quant What does the word 'Eloquent' mean?",
+            "section": "verbal",
+            "type": 2,
+            "options": ["Sad", "Angry", "Fluent", "Shy"],
+            "isPara": "No",
+            "videoLink": "",
+            "stage": 0
+          },
+          {
+            "id": "4",
+            "question":
+                " ASDFAsd fas df as df asd fa sdForm a sentence using the word 'Apprehension'.",
+            "section": "verbal",
+            "type": 3,
+            "options": [],
+            "isPara": "Yes",
+            "videoLink": "",
+            "stage": 0
+          }
+        ]
+      },
+      {
+        "name": "GK",
+        "timing": 10,
+        "questions": [
+          {
+            "id": "3",
+            "question":
+                "a as df as df as fa sdf as df asdf as sdfghjkl;kjhgfdghjkl;'lkjhgfdghjkl;'",
+            "section": "verbal",
+            "type": 2,
+            "options": ["Sad", "Angry", "Fluent", "Shy"],
+            "isPara": "No",
+            "videoLink": "",
+            "stage": 0
+          },
+          {
+            "id": "4",
+            "question": "Form a sentence using the word 'Apprehension'.",
+            "section": "verbal",
+            "type": 3,
+            "options": [],
+            "isPara": "Yes",
+            "videoLink": "",
+            "stage": 0
+          }
+        ]
+      },
+    ],
+    "isCalculatorAllowed": true,
+    "isToggleAllowed": false
+  },
+];
