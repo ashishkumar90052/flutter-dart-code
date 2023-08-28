@@ -449,12 +449,41 @@ List mockDatadd = [
     "mockname": "Sample Mock Test",
     "sections": [
       {
+        "name": "LRDI",
+        "timing": 10,
+        "questions": [
+          {
+            "id": "3",
+            "question":
+                "LRDI 2 Questions Remember to check the console output as you interact with your application. If you notice any unexpected behavior or the timer doesn't seem to decrease, it will give you a starting point to identify the problem. At LRDI What does the word 'Eloquent' mean?",
+            "section": "verbal",
+            "type": 2,
+            "options": ["Sad", "Angry", "Fluent", "Shy"],
+            "isPara": "No",
+            "videoLink": "",
+            "stage": 0
+          },
+          {
+            "id": "4",
+            "question":
+                "hello there For a sf a sf a d adsf m a sentence using the word 'Apprehension'.",
+            "section": "verbal",
+            "type": 3,
+            "options": [],
+            "isPara": "Yes",
+            "videoLink": "",
+            "stage": 0
+          }
+        ]
+      },
+      {
         "name": "VARC",
         "timing": 15,
         "questions": [
           {
             "id": "1",
-            "question": "At varc What is the square root of 144?",
+            "question":
+                "VARC 5 QUESTIONS At varc What is the square root of 144?",
             "section": "math",
             "type": 1,
             "options": ["9", "12", "15", "18"],
@@ -505,40 +534,13 @@ List mockDatadd = [
         ]
       },
       {
-        "name": "LRDI",
-        "timing": 10,
-        "questions": [
-          {
-            "id": "3",
-            "question":
-                "  adf a fd  a df asRemember to check the console output as you interact with your application. If you notice any unexpected behavior or the timer doesn't seem to decrease, it will give you a starting point to identify the problem. At LRDI What does the word 'Eloquent' mean?",
-            "section": "verbal",
-            "type": 2,
-            "options": ["Sad", "Angry", "Fluent", "Shy"],
-            "isPara": "No",
-            "videoLink": "",
-            "stage": 0
-          },
-          {
-            "id": "4",
-            "question":
-                "hello there For a sf a sf a d adsf m a sentence using the word 'Apprehension'.",
-            "section": "verbal",
-            "type": 3,
-            "options": [],
-            "isPara": "Yes",
-            "videoLink": "",
-            "stage": 0
-          }
-        ]
-      },
-      {
         "name": "QUANTS",
-        "timing": 15,
+        "timing": 20,
         "questions": [
           {
             "id": "3",
-            "question": "At Quant What does the word 'Eloquent' mean?",
+            "question":
+                "QUANTS 2 QUESTIONS At Quant What does the word 'Eloquent' mean?",
             "section": "verbal",
             "type": 2,
             "options": ["Sad", "Angry", "Fluent", "Shy"],
@@ -561,12 +563,12 @@ List mockDatadd = [
       },
       {
         "name": "GK",
-        "timing": 10,
+        "timing": 25,
         "questions": [
           {
             "id": "3",
             "question":
-                "a as df as df as fa sdf as df asdf as sdfghjkl;kjhgfdghjkl;'lkjhgfdghjkl;'",
+                "GK 2 QUESTIONS a as df as df as fa sdf as df asdf as sdfghjkl;kjhgfdghjkl;'lkjhgfdghjkl;'",
             "section": "verbal",
             "type": 2,
             "options": ["Sad", "Angry", "Fluent", "Shy"],

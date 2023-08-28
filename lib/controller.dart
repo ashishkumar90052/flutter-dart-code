@@ -1,9 +1,7 @@
 import 'dart:async';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutterdartcode/utils/const.dart';
 import 'package:get/get.dart';
-
 import 'model.dart';
 
 class MockTestController extends GetxController {
@@ -18,25 +16,25 @@ class MockTestController extends GetxController {
     mockTest.value = data;
   }
 
-  final RxList<MockTest> mockTests = <MockTest>[].obs;
-  final RxInt currentSectionIndex = 0.obs;
-  final RxInt currentQuestionIndex = 0.obs;
-  final Rx<Duration> remainingTime = const Duration(seconds: 0).obs;
+  RxList<MockTest> mockTests = <MockTest>[].obs;
+  var currentSectionIndex = 0.obs;
+  RxInt currentQuestionIndex = 0.obs;
+  Rx<Duration> remainingTime = const Duration(seconds: 0).obs;
   late Timer timer;
   var checkboxValue = false.obs;
-  final RxString selectedOption = ''.obs;
+  RxString selectedOption = ''.obs;
 
   @override
   void onInit() {
     super.onInit();
 
     for (var mockItem in mockDatadd) {
-      final mockTest = MockTest(
+      var mockTest = MockTest(
         mockname: mockItem['mockname'],
         sections: (mockItem['sections'] as List<dynamic>).map((sectionItem) {
-          final sectionQuestions =
+          var sectionQuestions =
               (sectionItem['questions'] as List<dynamic>).map((questionItem) {
-            final questionOptions = (questionItem['options'] as List<dynamic>)
+            var questionOptions = (questionItem['options'] as List<dynamic>)
                 .map((option) => option.toString())
                 .toList();
 
@@ -67,22 +65,30 @@ class MockTestController extends GetxController {
     startTimerForCurrentQuestion(mockTests[currentSectionIndex.value]
         .sections[currentSectionIndex.value]
         .timing);
-    printSectionsData();
+    // printSectionsData();
   }
 
-  void printSectionsData() {
-    for (var mockTest in mockTests) {
-      print('Mock Test: ${mockTest.mockname}');
-      for (var section in mockTest.sections) {
-        print('Section: ${section.name}, Timing: ${section.timing}');
-        for (var question in section.questions) {
-          print('Question: ${question.question}');
-          print('options: ${question.options}');
-          // Print other question details if needed
-        }
-      }
-    }
-  }
+  Section get currentSection =>
+      mockTests[0].sections[currentSectionIndex.value];
+
+  int get totalQuestionsInSection => currentSection.questions.length;
+
+  Question get currentQuestion =>
+      currentSection.questions[currentQuestionIndex.value];
+
+  // void printSectionsData() {
+  //   for (var mockTest in mockTests) {
+  //     print('Mock Test: ${mockTest.mockname}');
+  //     for (var section in mockTest.sections) {
+  //       print('Section: ${section.name}, Timing: ${section.timing}');
+  //       for (var question in section.questions) {
+  //         print('Question: ${question.question}');
+  //         print('options: ${question.options}');
+  //         // Print other question details if needed
+  //       }
+  //     }
+  //   }
+  // }
 
   void startTimerForCurrentQuestion(int seconds) {
     remainingTime.value = Duration(seconds: seconds);
@@ -98,73 +104,19 @@ class MockTestController extends GetxController {
     });
   }
 
-  // void startTimerForCurrentQuestion(int seconds) {
-  //   remainingTime.value = Duration(seconds: seconds);
-  //   timer = Timer.periodic(const Duration(seconds: 1), (timer) {
-  //     if (remainingTime.value.inSeconds > 0) {
-  //       debugPrint('Timer: ${remainingTime.value.inSeconds}');
-
-  //       remainingTime.value -= const Duration(seconds: 1);
-  //     } else {
-  //       debugPrint('Timer expired, moving to next section');
-  //       timer.cancel(); // Cancel the current timer
-  //       moveToNextSection();
-  //     }
-  //   });
-  // }
-
   void moveToNextQuestion() {
     if (currentQuestionIndex <
-        mockTests[currentSectionIndex.value]
-                .sections[currentSectionIndex.value]
-                .questions
-                .length -
-            1) {
+        mockTests[0].sections[currentSectionIndex.value].questions.length - 1) {
       currentQuestionIndex.value++;
     } else {
-      // Move to next section if no more questions
-      moveToNextSection();
+      debugPrint('dont move until timer gets 0');
     }
   }
 
   void moveToNextSection() {
-    final currentMock = mockTests[currentSectionIndex.value];
-    debugPrint(mockTests.length.toString());
-
-    // debugPrint('length of sections ${currentMock.sections.length.toString()}');
-    // debugPrint('current idx ${currentSectionIndex.toString()}');
-    if (currentSectionIndex < mockTests.length - 1) {
-      currentSectionIndex.value++;
-      currentQuestionIndex.value = 0;
-      debugPrint(mockTests.length.toString());
-      debugPrint('new length of sections ${currentMock.sections.toString()}');
-      debugPrint('new current idx ${currentSectionIndex.value.toString()}');
-
-      update();
-      refresh();
-      // startTimerForCurrentQuestion(
-      //     currentMock.sections[currentSectionIndex.value].timing);
-    } else {
-      debugPrint('All sections and questions completed');
-      // Handle as needed (e.g., show results)
-    }
+    currentSectionIndex.value++;
+    mockTests[0].sections[currentSectionIndex.value];
+    currentQuestionIndex.value = 0;
+    startTimerForCurrentQuestion(currentSection.timing);
   }
-
-  // void moveToNextSection() {
-  //   debugPrint('current section ${currentSectionIndex.toString()}');
-  //   debugPrint('mock lenght  ${mockTests.sections.length.toString()}');
-  //   if (currentSectionIndex < mockTests.length - 1) {
-  //     currentSectionIndex.value++;
-  //     currentQuestionIndex.value = 0;
-  //     startTimerForCurrentQuestion(mockTests[currentSectionIndex.value]
-  //         .sections[currentSectionIndex.value]
-  //         .timing);
-  //   } else {
-  //     debugPrint('current section ${currentSectionIndex.toString()}');
-  //     debugPrint('mock lenght  ${mockTests.length.toString()}');
-
-  //     debugPrint('All sections and questions completed');
-  //     // Handle as needed (e.g., show results)
-  //   }
-  // }
 }
