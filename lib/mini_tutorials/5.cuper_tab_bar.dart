@@ -57,7 +57,8 @@ class _SegmentedControlExampleState extends State<SegmentedControlExample> {
             },
           ),
         ),
-        child: ListView.separated(
+        child:
+         ListView.separated(
           itemCount: dataList.length,
           shrinkWrap: true,
           separatorBuilder: (context, index) =>
