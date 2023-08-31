@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutterdartcode/mini_tutorials/13.badges.dart';
+import 'package:flutterdartcode/screens/9.notification/local_notification.dart';
 import 'package:get/get.dart';
 import 'iOs/4.navigation_bar.dart';
 
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
       // ),
 
-      home: const NavigationExample(),
+      home: const LocalNotifications(),
       // initialBinding: BindingsBuilder(() {
       //   Get.put(MockTestController());
       // })

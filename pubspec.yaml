@@ -55,6 +55,8 @@ dependencies:
   percent_indicator: ^4.2.3
   flutter_sequence_animation:
   story: ^1.1.0
+  flutter_local_notifications: ^15.1.1
+  home_widget: ^0.3.0
 
 dev_dependencies:
   flutter_test:
